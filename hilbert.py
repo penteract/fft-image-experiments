@@ -4,7 +4,7 @@ import numpy as np
 
 def hilbert_indices(N):
     """Genrate 2^N x 2^N integer array, filled with values from 0 to 4^N along hilbert curve"""
-    m = array([[0]], dtype=np.int)
+    m = array([[0]], dtype=int)
     for i in range(N):
         d = 4**i
         m1 = vstack((hstack((m.T, m.T[::-1, ::-1] + 3*d)),
